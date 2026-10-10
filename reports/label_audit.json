@@ -1,0 +1,30 @@
+{
+  "annotated": 300,
+  "agreement": 0.86,
+  "cohen_kappa": 0.79,
+  "agreement_by_dataset_label": {
+    "insult": 0.87,
+    "neutral": 0.93,
+    "toxic": 0.78
+  },
+  "confusion": {
+    "вручную:neutral": {
+      "датасет:neutral": 93,
+      "датасет:insult": 8,
+      "датасет:toxic": 4
+    },
+    "вручную:insult": {
+      "датасет:neutral": 7,
+      "датасет:insult": 87,
+      "датасет:toxic": 18
+    },
+    "вручную:toxic": {
+      "датасет:neutral": 0,
+      "датасет:insult": 5,
+      "датасет:toxic": 78
+    }
+  },
+  "disagreements_reviewed": 42,
+  "dataset_label_errors": 0,
+  "dataset_label_accuracy": 1.0
+}

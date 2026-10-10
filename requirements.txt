@@ -1,0 +1,21 @@
+--extra-index-url https://download.pytorch.org/whl/cu130
+accelerate==1.15.0
+datasets==5.1.0
+edge-tts==7.2.8
+ipykernel==7.4.0
+jupyter==1.1.1
+librosa==1.0.0
+matplotlib==3.11.2
+numpy==2.5.3
+pandas==3.0.6
+pyarrow==26.0.0
+requests==2.34.2
+scikit-learn==1.9.1
+seaborn==0.13.2
+soundfile==0.14.0
+torch==2.14.1+cu130
+tqdm==4.70.1
+transformers==5.19.0
+jiwer==4.0.0
+navec==0.10.0
+num2words==0.5.14

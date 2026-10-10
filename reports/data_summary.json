@@ -1,0 +1,50 @@
+{
+  "okru_raw": 248290,
+  "okru_after_empty": 248288,
+  "okru_after_no_cyrillic": 248287,
+  "okru_contacts_removed": 3842,
+  "okru_conflicting_texts": 17,
+  "okru_exact_duplicates_removed": 5475,
+  "okru_conflicting_near_groups": 3,
+  "okru_near_duplicates_removed": 379,
+  "okru_clean": 238591,
+  "paradetox_pairs": 12204,
+  "cross_source_duplicates_removed": 969,
+  "textdetox_clean": 4978,
+  "textdetox_overlap_with_main": 4906,
+  "textdetox_without_overlap": 72,
+  "2ch_clean": 14143,
+  "2ch_overlap_with_main": 106,
+  "2ch_without_overlap": 14037,
+  "splits": {
+    "train": {
+      "neutral": 164762,
+      "insult": 22530,
+      "toxic": 12539
+    },
+    "val": {
+      "neutral": 20614,
+      "insult": 2816,
+      "toxic": 1567
+    },
+    "test": {
+      "neutral": 20614,
+      "insult": 2816,
+      "toxic": 1568
+    }
+  },
+  "splits_by_source": {
+    "train": {
+      "okru": 190872,
+      "paradetox": 8959
+    },
+    "val": {
+      "okru": 23859,
+      "paradetox": 1138
+    },
+    "test": {
+      "okru": 23860,
+      "paradetox": 1138
+    }
+  }
+}
