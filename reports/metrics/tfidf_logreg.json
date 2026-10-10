@@ -1,0 +1,214 @@
+{
+  "model": "tfidf_logreg",
+  "val_macro_f1": 0.8996,
+  "test": {
+    "macro_f1": 0.897,
+    "accuracy": 0.9629,
+    "per_class": {
+      "neutral": {
+        "precision": 0.9877,
+        "recall": 0.9846,
+        "f1": 0.9861,
+        "support": 20614
+      },
+      "insult": {
+        "precision": 0.8553,
+        "recall": 0.8647,
+        "f1": 0.86,
+        "support": 2816
+      },
+      "toxic": {
+        "precision": 0.8358,
+        "recall": 0.854,
+        "f1": 0.8448,
+        "support": 1568
+      }
+    },
+    "confusion": [
+      [
+        20296,
+        241,
+        77
+      ],
+      [
+        195,
+        2435,
+        186
+      ],
+      [
+        58,
+        171,
+        1339
+      ]
+    ]
+  },
+  "external_2ch_binary": {
+    "f1_toxic": 0.6571,
+    "macro_f1": 0.7678,
+    "size": 14037
+  },
+  "probes": {
+    "мат без адресата": {
+      "accuracy": 0.133,
+      "n": 15
+    },
+    "политика без грубости": {
+      "accuracy": 1.0,
+      "n": 10
+    },
+    "бытовое нейтральное": {
+      "accuracy": 1.0,
+      "n": 10
+    },
+    "оскорбление без мата": {
+      "accuracy": 0.7,
+      "n": 10
+    },
+    "угроза без мата": {
+      "accuracy": 0.4,
+      "n": 10
+    }
+  },
+  "probes_errors": [
+    {
+      "group": "мат без адресата",
+      "text_raw": "б**, опять автобус ушёл перед носом",
+      "label": "neutral",
+      "pred": "insult"
+    },
+    {
+      "group": "мат без адресата",
+      "text_raw": "ну пи***ц, на улице минус тридцать",
+      "label": "neutral",
+      "pred": "insult"
+    },
+    {
+      "group": "мат без адресата",
+      "text_raw": "су*а, телефон опять сел на морозе",
+      "label": "neutral",
+      "pred": "insult"
+    },
+    {
+      "group": "мат без адресата",
+      "text_raw": "ни**я себе, какие цены на бензин стали",
+      "label": "neutral",
+      "pred": "insult"
+    },
+    {
+      "group": "мат без адресата",
+      "text_raw": "бл**ь, я проспал, буду через полчаса",
+      "label": "neutral",
+      "pred": "toxic"
+    },
+    {
+      "group": "мат без адресата",
+      "text_raw": "ох***ь, мы выиграли, ты видел счёт",
+      "label": "neutral",
+      "pred": "insult"
+    },
+    {
+      "group": "мат без адресата",
+      "text_raw": "х** знает, когда посылка придёт",
+      "label": "neutral",
+      "pred": "insult"
+    },
+    {
+      "group": "мат без адресата",
+      "text_raw": "короче, еб***й принтер опять зажевал бумагу",
+      "label": "neutral",
+      "pred": "insult"
+    },
+    {
+      "group": "мат без адресата",
+      "text_raw": "пи****о вчера посидели, надо повторить",
+      "label": "neutral",
+      "pred": "insult"
+    },
+    {
+      "group": "мат без адресата",
+      "text_raw": "б**, я так устал на работе сегодня",
+      "label": "neutral",
+      "pred": "insult"
+    },
+    {
+      "group": "мат без адресата",
+      "text_raw": "да по**й, давай просто закажем пиццу",
+      "label": "neutral",
+      "pred": "insult"
+    },
+    {
+      "group": "мат без адресата",
+      "text_raw": "пи***ц как вкусно мама приготовила",
+      "label": "neutral",
+      "pred": "insult"
+    },
+    {
+      "group": "мат без адресата",
+      "text_raw": "ну на**й этот дождь, я дома останусь",
+      "label": "neutral",
+      "pred": "insult"
+    },
+    {
+      "group": "оскорбление без мата",
+      "text_raw": "какой же ты тупой, это невозможно",
+      "label": "insult",
+      "pred": "neutral"
+    },
+    {
+      "group": "оскорбление без мата",
+      "text_raw": "ты бездарь и неудачник, ничего не умеешь",
+      "label": "insult",
+      "pred": "neutral"
+    },
+    {
+      "group": "оскорбление без мата",
+      "text_raw": "мозгов у тебя как у курицы",
+      "label": "insult",
+      "pred": "neutral"
+    },
+    {
+      "group": "угроза без мата",
+      "text_raw": "я знаю, где ты живёшь, жди гостей",
+      "label": "toxic",
+      "pred": "neutral"
+    },
+    {
+      "group": "угроза без мата",
+      "text_raw": "тебе не жить, понял",
+      "label": "toxic",
+      "pred": "neutral"
+    },
+    {
+      "group": "угроза без мата",
+      "text_raw": "сожгу твою машину, если не вернёшь деньги",
+      "label": "toxic",
+      "pred": "neutral"
+    },
+    {
+      "group": "угроза без мата",
+      "text_raw": "я тебя найду и закопаю",
+      "label": "toxic",
+      "pred": "neutral"
+    },
+    {
+      "group": "угроза без мата",
+      "text_raw": "скоро ты пожалеешь, что родился, я до тебя доберусь",
+      "label": "toxic",
+      "pred": "neutral"
+    },
+    {
+      "group": "угроза без мата",
+      "text_raw": "готовься, после уроков тебе конец",
+      "label": "toxic",
+      "pred": "neutral"
+    }
+  ],
+  "param": 2,
+  "val_search": {
+    "0.5": 0.892,
+    "1": 0.8956,
+    "2": 0.8996,
+    "4": 0.8983,
+    "8": 0.8953
+  }
+}

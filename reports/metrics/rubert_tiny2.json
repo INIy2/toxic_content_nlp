@@ -1,0 +1,238 @@
+{
+  "model": "rubert_tiny2",
+  "val_macro_f1": 0.901,
+  "test": {
+    "macro_f1": 0.9,
+    "accuracy": 0.9629,
+    "per_class": {
+      "neutral": {
+        "precision": 0.9906,
+        "recall": 0.9807,
+        "f1": 0.9856,
+        "support": 20614
+      },
+      "insult": {
+        "precision": 0.8461,
+        "recall": 0.8803,
+        "f1": 0.8629,
+        "support": 2816
+      },
+      "toxic": {
+        "precision": 0.8282,
+        "recall": 0.8763,
+        "f1": 0.8516,
+        "support": 1568
+      }
+    },
+    "confusion": [
+      [
+        20217,
+        300,
+        97
+      ],
+      [
+        149,
+        2479,
+        188
+      ],
+      [
+        43,
+        151,
+        1374
+      ]
+    ]
+  },
+  "external_2ch_binary": {
+    "f1_toxic": 0.6745,
+    "macro_f1": 0.7766,
+    "size": 14037
+  },
+  "probes": {
+    "мат без адресата": {
+      "accuracy": 0.2,
+      "n": 15
+    },
+    "политика без грубости": {
+      "accuracy": 1.0,
+      "n": 10
+    },
+    "бытовое нейтральное": {
+      "accuracy": 1.0,
+      "n": 10
+    },
+    "оскорбление без мата": {
+      "accuracy": 0.9,
+      "n": 10
+    },
+    "угроза без мата": {
+      "accuracy": 0.5,
+      "n": 10
+    }
+  },
+  "probes_errors": [
+    {
+      "group": "мат без адресата",
+      "text_raw": "ну пи***ц, на улице минус тридцать",
+      "label": "neutral",
+      "pred": "insult"
+    },
+    {
+      "group": "мат без адресата",
+      "text_raw": "су*а, телефон опять сел на морозе",
+      "label": "neutral",
+      "pred": "insult"
+    },
+    {
+      "group": "мат без адресата",
+      "text_raw": "ни**я себе, какие цены на бензин стали",
+      "label": "neutral",
+      "pred": "insult"
+    },
+    {
+      "group": "мат без адресата",
+      "text_raw": "бл**ь, я проспал, буду через полчаса",
+      "label": "neutral",
+      "pred": "insult"
+    },
+    {
+      "group": "мат без адресата",
+      "text_raw": "ох***ь, мы выиграли, ты видел счёт",
+      "label": "neutral",
+      "pred": "insult"
+    },
+    {
+      "group": "мат без адресата",
+      "text_raw": "х** знает, когда посылка придёт",
+      "label": "neutral",
+      "pred": "insult"
+    },
+    {
+      "group": "мат без адресата",
+      "text_raw": "короче, еб***й принтер опять зажевал бумагу",
+      "label": "neutral",
+      "pred": "insult"
+    },
+    {
+      "group": "мат без адресата",
+      "text_raw": "пи****о вчера посидели, надо повторить",
+      "label": "neutral",
+      "pred": "insult"
+    },
+    {
+      "group": "мат без адресата",
+      "text_raw": "б**, я так устал на работе сегодня",
+      "label": "neutral",
+      "pred": "insult"
+    },
+    {
+      "group": "мат без адресата",
+      "text_raw": "да по**й, давай просто закажем пиццу",
+      "label": "neutral",
+      "pred": "toxic"
+    },
+    {
+      "group": "мат без адресата",
+      "text_raw": "пи***ц как вкусно мама приготовила",
+      "label": "neutral",
+      "pred": "insult"
+    },
+    {
+      "group": "мат без адресата",
+      "text_raw": "ну на**й этот дождь, я дома останусь",
+      "label": "neutral",
+      "pred": "insult"
+    },
+    {
+      "group": "оскорбление без мата",
+      "text_raw": "ты бездарь и неудачник, ничего не умеешь",
+      "label": "insult",
+      "pred": "neutral"
+    },
+    {
+      "group": "угроза без мата",
+      "text_raw": "я знаю, где ты живёшь, жди гостей",
+      "label": "toxic",
+      "pred": "neutral"
+    },
+    {
+      "group": "угроза без мата",
+      "text_raw": "тебе не жить, понял",
+      "label": "toxic",
+      "pred": "neutral"
+    },
+    {
+      "group": "угроза без мата",
+      "text_raw": "сожгу твою машину, если не вернёшь деньги",
+      "label": "toxic",
+      "pred": "neutral"
+    },
+    {
+      "group": "угроза без мата",
+      "text_raw": "скоро ты пожалеешь, что родился, я до тебя доберусь",
+      "label": "toxic",
+      "pred": "neutral"
+    },
+    {
+      "group": "угроза без мата",
+      "text_raw": "готовься, после уроков тебе конец",
+      "label": "toxic",
+      "pred": "neutral"
+    }
+  ],
+  "params": {
+    "model": "cointegrated/rubert-tiny2",
+    "name": "rubert_tiny2",
+    "epochs": 3,
+    "lr": 5e-05,
+    "batch": 64,
+    "max_len": 128,
+    "weight_power": 0.5,
+    "evals_per_epoch": 2
+  },
+  "history": [
+    {
+      "step": 1562,
+      "epoch": 0.5,
+      "loss": 0.1908,
+      "val_macro_f1": 0.8573,
+      "minutes": 0.7
+    },
+    {
+      "step": 3124,
+      "epoch": 1.0,
+      "loss": 0.0684,
+      "val_macro_f1": 0.8762,
+      "minutes": 1.4
+    },
+    {
+      "step": 4686,
+      "epoch": 1.5,
+      "loss": 0.0411,
+      "val_macro_f1": 0.8907,
+      "minutes": 2.0
+    },
+    {
+      "step": 6248,
+      "epoch": 2.0,
+      "loss": 0.0522,
+      "val_macro_f1": 0.8941,
+      "minutes": 2.7
+    },
+    {
+      "step": 7810,
+      "epoch": 2.5,
+      "loss": 0.0388,
+      "val_macro_f1": 0.9,
+      "minutes": 3.4
+    },
+    {
+      "step": 9369,
+      "epoch": 3.0,
+      "loss": 0.2342,
+      "val_macro_f1": 0.901,
+      "minutes": 4.1
+    }
+  ],
+  "best_val_macro_f1": 0.901,
+  "train_minutes": 4.2
+}

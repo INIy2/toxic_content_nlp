@@ -1,0 +1,238 @@
+{
+  "model": "textcnn_navec",
+  "val_macro_f1": 0.8873,
+  "test": {
+    "macro_f1": 0.8805,
+    "accuracy": 0.9547,
+    "per_class": {
+      "neutral": {
+        "precision": 0.9806,
+        "recall": 0.9813,
+        "f1": 0.9809,
+        "support": 20614
+      },
+      "insult": {
+        "precision": 0.8158,
+        "recall": 0.8491,
+        "f1": 0.8321,
+        "support": 2816
+      },
+      "toxic": {
+        "precision": 0.8664,
+        "recall": 0.794,
+        "f1": 0.8286,
+        "support": 1568
+      }
+    },
+    "confusion": [
+      [
+        20229,
+        305,
+        80
+      ],
+      [
+        313,
+        2391,
+        112
+      ],
+      [
+        88,
+        235,
+        1245
+      ]
+    ]
+  },
+  "external_2ch_binary": {
+    "f1_toxic": 0.6223,
+    "macro_f1": 0.7442,
+    "size": 14037
+  },
+  "probes": {
+    "мат без адресата": {
+      "accuracy": 0.2,
+      "n": 15
+    },
+    "политика без грубости": {
+      "accuracy": 1.0,
+      "n": 10
+    },
+    "бытовое нейтральное": {
+      "accuracy": 1.0,
+      "n": 10
+    },
+    "оскорбление без мата": {
+      "accuracy": 0.9,
+      "n": 10
+    },
+    "угроза без мата": {
+      "accuracy": 0.6,
+      "n": 10
+    }
+  },
+  "probes_errors": [
+    {
+      "group": "мат без адресата",
+      "text_raw": "б**, опять автобус ушёл перед носом",
+      "label": "neutral",
+      "pred": "insult"
+    },
+    {
+      "group": "мат без адресата",
+      "text_raw": "ну пи***ц, на улице минус тридцать",
+      "label": "neutral",
+      "pred": "insult"
+    },
+    {
+      "group": "мат без адресата",
+      "text_raw": "су*а, телефон опять сел на морозе",
+      "label": "neutral",
+      "pred": "insult"
+    },
+    {
+      "group": "мат без адресата",
+      "text_raw": "ни**я себе, какие цены на бензин стали",
+      "label": "neutral",
+      "pred": "insult"
+    },
+    {
+      "group": "мат без адресата",
+      "text_raw": "бл**ь, я проспал, буду через полчаса",
+      "label": "neutral",
+      "pred": "insult"
+    },
+    {
+      "group": "мат без адресата",
+      "text_raw": "ох***ь, мы выиграли, ты видел счёт",
+      "label": "neutral",
+      "pred": "insult"
+    },
+    {
+      "group": "мат без адресата",
+      "text_raw": "х** знает, когда посылка придёт",
+      "label": "neutral",
+      "pred": "insult"
+    },
+    {
+      "group": "мат без адресата",
+      "text_raw": "короче, еб***й принтер опять зажевал бумагу",
+      "label": "neutral",
+      "pred": "insult"
+    },
+    {
+      "group": "мат без адресата",
+      "text_raw": "б**, я так устал на работе сегодня",
+      "label": "neutral",
+      "pred": "insult"
+    },
+    {
+      "group": "мат без адресата",
+      "text_raw": "да по**й, давай просто закажем пиццу",
+      "label": "neutral",
+      "pred": "insult"
+    },
+    {
+      "group": "мат без адресата",
+      "text_raw": "пи***ц как вкусно мама приготовила",
+      "label": "neutral",
+      "pred": "insult"
+    },
+    {
+      "group": "мат без адресата",
+      "text_raw": "ну на**й этот дождь, я дома останусь",
+      "label": "neutral",
+      "pred": "insult"
+    },
+    {
+      "group": "оскорбление без мата",
+      "text_raw": "мозгов у тебя как у курицы",
+      "label": "insult",
+      "pred": "neutral"
+    },
+    {
+      "group": "угроза без мата",
+      "text_raw": "я знаю, где ты живёшь, жди гостей",
+      "label": "toxic",
+      "pred": "neutral"
+    },
+    {
+      "group": "угроза без мата",
+      "text_raw": "тебе не жить, понял",
+      "label": "toxic",
+      "pred": "neutral"
+    },
+    {
+      "group": "угроза без мата",
+      "text_raw": "скоро ты пожалеешь, что родился, я до тебя доберусь",
+      "label": "toxic",
+      "pred": "neutral"
+    },
+    {
+      "group": "угроза без мата",
+      "text_raw": "готовься, после уроков тебе конец",
+      "label": "toxic",
+      "pred": "neutral"
+    }
+  ],
+  "params": {
+    "arch": "textcnn",
+    "epochs": 8,
+    "lr": 0.002,
+    "batch": 256,
+    "max_len": 100,
+    "weight_power": 0.5
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "loss": 0.325,
+      "val_macro_f1": 0.8607,
+      "minutes": 0.3
+    },
+    {
+      "epoch": 2,
+      "loss": 0.2146,
+      "val_macro_f1": 0.8873,
+      "minutes": 0.6
+    },
+    {
+      "epoch": 3,
+      "loss": 0.2087,
+      "val_macro_f1": 0.8752,
+      "minutes": 0.9
+    },
+    {
+      "epoch": 4,
+      "loss": 0.1359,
+      "val_macro_f1": 0.8833,
+      "minutes": 1.1
+    },
+    {
+      "epoch": 5,
+      "loss": 0.1386,
+      "val_macro_f1": 0.8814,
+      "minutes": 1.4
+    },
+    {
+      "epoch": 6,
+      "loss": 0.1702,
+      "val_macro_f1": 0.8813,
+      "minutes": 1.7
+    },
+    {
+      "epoch": 7,
+      "loss": 0.0913,
+      "val_macro_f1": 0.8816,
+      "minutes": 2.0
+    },
+    {
+      "epoch": 8,
+      "loss": 0.0459,
+      "val_macro_f1": 0.8799,
+      "minutes": 2.2
+    }
+  ],
+  "vocab_size": 84847,
+  "navec_coverage": 0.8462,
+  "train_minutes": 2.3,
+  "parameters": 26032663
+}
